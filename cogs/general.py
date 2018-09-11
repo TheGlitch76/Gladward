@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 invlink = 'https://discordapp.com/oauth2/authorize?client_id=482645162032365568&permissions=8&redirect_uri=https%3A%2F%2Fdiscordapp.com%2F&response_type=code&scope=identify%20bot'
-serverlink = 'H'
+serverlink = 'https://discord.gg/C7FrJnh'
 
 
 class General:
