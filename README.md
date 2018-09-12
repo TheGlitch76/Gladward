@@ -27,7 +27,7 @@ https://github.com/Rapptz/discord.py/tree/rewrite
 ### Pycharm installation instructions
 
 Go to Settings > Project: [name] > Project Interpreter and click the + Icon
-Search up discord-rewrite and click install.
+Search up discord-rewrite, and click install.
 
 ### Reminder:
 Please don't contact me for issues regarding discord.py, that should be taken to the discord.py server, which has support for both the rewrite and the asyncio (0.16.x) versions. 
