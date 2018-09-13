@@ -1,3 +1,5 @@
+!!! Might as well warn you now, this is a pretty vulgar bot in some cases. Especially the 8-ball !!!
+
 # Gladward Version 1
 A bot made in the discord.py rewrite.
 
