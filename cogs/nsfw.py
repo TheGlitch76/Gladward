@@ -60,7 +60,7 @@ class NSFW:
     @commands.command()
     async def neko(self, ctx):
         if ctx.channel.is_nsfw() == False:
-            await ctx.send("Sorry {}, you have to be in an NSFW channel to use that command.".format(ctx.message.author))
+            await ctx.send("Sorry {}, you have to be in an NSFW channel to use that command.".format(ctx.message.author.mention))
         else:
             reddit = praw.Reddit(client_id='KIcJ2fQpsJpKZg',
                                  client_secret='WpLetIWBxKwK_jyZUQkWU2PN-lA',
