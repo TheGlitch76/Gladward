@@ -23,12 +23,12 @@ class Fun:
     async def hug(self, ctx, user: discord.Member):
         # Array used to get a random hugging gif from the images\hugging_gifs folder.
         hugginggifs = [
-            discord.File('images\hugging_gifs\d69b8ce822eac0d007aeeb26228e8a50.gif'),
-            discord.File('images\hugging_gifs\hugtime.gif'),
-            discord.File('images\hugging_gifs\RevolvingWigglyDikkops-size_restricted.gif'),
-            discord.File('images\hugging_gifs\Tumblrshit.gif'),
-            discord.File('images\hugging_gifs\V47M1S4.gif'),
-            discord.File('images\hugging_gifs\F2805f274471676c96aff2bc9fbedd70.gif')
+            discord.File('images/hugging_gifs/d69b8ce822eac0d007aeeb26228e8a50.gif'),
+            discord.File('images/hugging_gifs/hugtime.gif'),
+            discord.File('images/hugging_gifs/RevolvingWigglyDikkops-size_restricted.gif'),
+            discord.File('images/hugging_gifs/Tumblrshit.gif'),
+            discord.File('images/hugging_gifs/V47M1S4.gif'),
+            discord.File('images/hugging_gifs/F2805f274471676c96aff2bc9fbedd70.gif')
         ] # (I'll probably switch this to a file hosting of some sort to make this easier)
 
         await ctx.send("{} gave ".format(ctx.message.author.mention) + "{} a hug! \n".format(user.mention))
@@ -106,12 +106,12 @@ class Fun:
 
     @commands.command()
     async def pinged(self, ctx):
-        await ctx.send(file=discord.File('images\Tenor.gif'))
+        await ctx.send(file=discord.File('images/Tenor.gif'))
 
 
     @commands.command()
     async def gladward(self, ctx):
-        await ctx.send(file=discord.File('images\gladward.png'))
+        await ctx.send(file=discord.File('images/gladward.png'))
         await ctx.send("G L A D W A R D")
 
 #Adds the cog to the bot.
