@@ -3,7 +3,7 @@
 # Gladward Version 1
 A bot made in the discord.py rewrite.
 
-## What even is gladward?
+## What even is Gladward?
 Gladward is an open source bot made by Zeexel in the discord.py rewrite. While it's not completely done, there's still many things to play around with at the moment.
 
 
@@ -23,13 +23,8 @@ Features that users suggest in the support discord.
 (Hey you should probably credit me when you use this code)
 
 ## What do I need to use this?
-You need the discord.py rewrite, which can be downloaded here:
-https://github.com/Rapptz/discord.py/tree/rewrite
-
-### Pycharm installation instructions
-
-Go to Settings > Project: [name] > Project Interpreter and click the + Icon
-Search up discord-rewrite, and click install.
+Take a look at update-and-exec.sh, it contains commands to install everything for you through pip3. If you just want the package names, look in requirements.txt
+#### IF USING AN IDE SUCH AS PYCHARM, YOU ARE ON YOUR OWN. You can figure out how to install everything to the project interpreter online.
 
 ### Reminder:
 Please don't contact me for issues regarding discord.py, that should be taken to the discord.py server, which has support for both the rewrite and the asyncio (0.16.x) versions. 
