@@ -30,6 +30,7 @@ class Admincmds:
                 await asyncio.sleep(1)
                 await ctx.send("{} || Sucessfully cleared **{}** messages.".format(sender.mention, amount))
 
+
     @clear.error
     async def clear_handler(self, ctx, error):
         sender = ctx.message.author
@@ -59,10 +60,8 @@ class Admincmds:
     @commands.has_permissions(kick_members=True)
     async def kick(self, ctx, user: dMember):
         sender = ctx.message.author
-        if user.id == discord.Guild.owner_id:
-            print("Server owner's id is {}".format(discord.Guild.owner_id))
-            print("User's ID is {}".format(user.id))
-            await ctx.send("{} || Not even I have the ability to kick the owner".format(sender.mention))
+        if sender.top_role == user.top_role:
+            await ctx.send("{] || Can't kick someone who has the same role as yours.".format(sender.mention))
         else:
             if sender.top_role < user.top_role:
                 await ctx.send("{} || Can't kick a role that's higher than yours!".format(sender.mention))
@@ -85,10 +84,8 @@ class Admincmds:
     @commands.has_permissions(ban_members=True)
     async def ban(self, ctx, user: dMember, *, banReason):
         sender = ctx.message.author
-        if user.id == discord.Guild.owner_id:
-            print("Server owner's id is {}".format(discord.Guild.owner_id))
-            print("User's ID is {}".format(user.id))
-            await ctx.send("{} || Not even I have the ability to ban the owner".format(sender.mention))
+        if sender.top_role == user.top_role:
+            await ctx.send("{} || Can't ban someone who has the same role as yours.".format(sender.mention))
         else:
             if sender.top_role < user.top_role:
                 await ctx.send("{} || Can't ban a role that's higher than yours!".format(sender.mention))

@@ -1,5 +1,9 @@
-import discord
 import json
+redditdata = json.load(open("config/reddit_data.json","r"))
+
+
+
+import discord
 import praw
 import random
 from discord.ext import commands
@@ -19,9 +23,9 @@ class NSFW:
         if ctx.channel.is_nsfw() == False:
             await ctx.send("Sorry {}, you have to be in an NSFW channel to use that command!".format(ctx.message.author.mention))
         else:
-            reddit = praw.Reddit(client_id='KIcJ2fQpsJpKZg',
-                                 client_secret='WpLetIWBxKwK_jyZUQkWU2PN-lA',
-                                 user_agent='Gladward')
+            reddit = praw.Reddit(client_id=redditdata['clientid'],
+                                 client_secret=redditdata['clientsecret'],
+                                 user_agent=redditdata['useragent'])
             memes_submissions = reddit.subreddit('hentai').new()
             post_to_pick = random.randint(1, 10)
             for i in range(0, post_to_pick):
@@ -40,9 +44,9 @@ class NSFW:
         if ctx.channel.is_nsfw() == False:
             await ctx.send("Sorry {}, you have to be in an NSFW channel to use that command!".format(ctx.message.author.mention))
         else:
-            reddit = praw.Reddit(client_id='KIcJ2fQpsJpKZg',
-                                 client_secret='WpLetIWBxKwK_jyZUQkWU2PN-lA',
-                                 user_agent='Gladward')
+            reddit = praw.Reddit(client_id=redditdata['clientid'],
+                                 client_secret=redditdata['clientsecret'],
+                                 user_agent=redditdata['useragent'])
             memes_submissions = reddit.subreddit('paizuri').hot()
             post_to_pick = random.randint(1, 10)
             for i in range(0, post_to_pick):
@@ -60,11 +64,11 @@ class NSFW:
     @commands.command()
     async def neko(self, ctx):
         if ctx.channel.is_nsfw() == False:
-            await ctx.send("Sorry {}, you have to be in an NSFW channel to use that command.".format(ctx.message.author))
+            await ctx.send("Sorry {}, you have to be in an NSFW channel to use that command.".format(ctx.message.author.mention))
         else:
-            reddit = praw.Reddit(client_id='KIcJ2fQpsJpKZg',
-                                 client_secret='WpLetIWBxKwK_jyZUQkWU2PN-lA',
-                                 user_agent='Gladward')
+            reddit = praw.Reddit(client_id=redditdata['clientid'],
+                                 client_secret=redditdata['clientsecret'],
+                                 user_agent=redditdata['useragent'])
             memes_submissions = reddit.subreddit('nekogirls').hot()
             post_to_pick = random.randint(1, 10)
             for i in range(0, post_to_pick):
@@ -84,11 +88,11 @@ class NSFW:
 
         else:
             fbi_memes = [
-                discord.File('images\FBI\FBI.jpg'),
-                discord.File('images\FBI\FBI2.png'),
-                discord.File('images\FBI\FBI3.gif'),
-                discord.File('images\FBI\FBI4.jpg'),
-                discord.File('images\FBI\FBI5.jpg')
+                discord.File('images/FBI/FBI.jpg'),
+                discord.File('images/FBI/FBI2.png'),
+                discord.File('images/FBI/FBI3.gif'),
+                discord.File('images/FBI/FBI4.jpg'),
+                discord.File('images/FBI/FBI5.jpg')
             ]
             await ctx.send("**FBI OPEN UP!**\n")
             await ctx.send(file=random.choice(fbi_memes))

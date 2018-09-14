@@ -50,6 +50,7 @@ class HelpCmds:
             embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/452298699004182529/482649364871905290/image.png")
             embed.add_field(name="$server", value="``Provides and invite link to Zeexel's server``", inline=False)
             embed.add_field(name="$invite", value="``Provides a link to invite gladward to your server!``", inline=False)
+            embed.add_field(name="$ping", value="``Pongs right back at you, buddy.``", inline=False)
             await ctx.send(embed=embed)
 
 

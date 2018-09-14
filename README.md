@@ -1,5 +1,3 @@
-!!! Might as well warn you now, this is a pretty vulgar bot in some cases. Especially the 8-ball !!!
-
 # Gladward Version 1
 A bot made in the discord.py rewrite.
 
@@ -26,8 +24,39 @@ Features that users suggest in the support discord.
 Take a look at update-and-exec.sh, it contains commands to install everything for you through pip3. If you just want the package names, look in requirements.txt
 #### IF USING AN IDE SUCH AS PYCHARM, YOU ARE ON YOUR OWN. You can figure out how to install everything to the project interpreter online.
 
+### Reddit instructions (For the memes command and the nsfw commands)
+Go to https://www.reddit.com/prefs/apps/
+
+Click "Create App" (or in some cases 'Create Another App')
+You should see this. Make a name for it and a description.
+![B)](https://i.imgur.com/75NDvP2.png)
+
+Next, change this to be a script intended for personal use.
+![NO COOL DUDES, VERY ILLEGAL!](https://i.imgur.com/mSZmRs5.png)
+
+Finally, make a file in your config (if you're using one) called reddit_data.json (or whatever you want)
+Make sure it looks like this (again, make the variable names whatever)
+
+![B)](https://imgur.com/2Q5iWzz.png)
+
+Put your client id, secret, and user agent (which is just the name of your application) into these variables.
+
+## Using it in the bot
+
+Make sure you have json imported, and your json file is loaded in the cog.
+![B)](https://imgur.com/JNVfoZS.png)
+
+(Also might wanna make sure you have praw imported here because reddit)
+
+Next, use the variables defined in the json file with your python script like this.
+![](https://imgur.com/pGiEf5t.png)
+
+## And after all that, your bot should be done!
+
+![Heyy, that's pretty good!](https://imgur.com/HXkqdDp.png)
+
 ### Reminder:
-Please don't contact me for issues regarding discord.py, that should be taken to the discord.py server, which has support for both the rewrite and the asyncio (0.16.x) versions. 
-https://discordapp.com/invite/r3sSKJJ
+Please don't contact me for issues regarding discord.py, that should be taken to the ![discord.py server](https://discordapp.com/invite/r3sSKJJ), which has support for both the rewrite and the asyncio (0.16.x) versions. 
+
 
 

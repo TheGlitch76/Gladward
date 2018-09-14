@@ -15,7 +15,7 @@ from discord.ext import commands
 
 bot = commands.Bot(command_prefix="$")
 bot.remove_command('help')
-game = discord.Game(name="Ajit pai kinda sucks ngl")
+game = discord.Game(name="$help | https://github.com/Zeexel/Gladward")
 #---------------------------------------------------------------------------------------------
 
 
