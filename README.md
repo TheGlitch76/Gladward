@@ -1,5 +1,3 @@
-!!! Might as well warn you now, this is a pretty vulgar bot in some cases. Especially the 8-ball !!!
-
 # Gladward Version 1
 A bot made in the discord.py rewrite.
 
@@ -64,7 +62,7 @@ Next, use the variables defined in the json file with your python script like th
 
 
 ### Reminder:
-Please don't contact me for issues regarding discord.py, that should be taken to the discord.py server, which has support for both the rewrite and the asyncio (0.16.x) versions. 
-https://discordapp.com/invite/r3sSKJJ
+Please don't contact me for issues regarding discord.py, that should be taken to the ![discord.py server](https://discordapp.com/invite/r3sSKJJ), which has support for both the rewrite and the asyncio (0.16.x) versions. 
+
 
 
