@@ -25,11 +25,43 @@ Features that users suggest in the support discord.
 ## What do I need to use this?
 You need the discord.py rewrite, which can be downloaded here:
 https://github.com/Rapptz/discord.py/tree/rewrite
+(If you don't feel like finding the command yourself, here.)
+pip install -U git+https://github.com/Rapptz/discord.py@rewrite#egg=discord.py[voice]
 
-### Pycharm installation instructions
+You also need praw 6.0.0, which can be installed by using this command on your terminal: pip install praw
 
-Go to Settings > Project: [name] > Project Interpreter and click the + Icon
-Search up discord-rewrite, and click install.
+
+### Reddit instructions (For the memes command and the nsfw commands)
+Go to https://www.reddit.com/prefs/apps/
+
+Click "Create App" (or in some cases 'Create Another App')
+You should see this. Make a name for it and a description.
+![B)](https://i.imgur.com/75NDvP2.png)
+
+Next, change this to be a script intended for personal use.
+![NO COOL DUDES, VERY ILLEGAL!](https://i.imgur.com/mSZmRs5.png)
+
+Finally, make a file in your config (if you're using one) called reddit_data.json (or whatever you want)
+Make sure it looks like this (again, make the variable names whatever)
+
+![B)](https://imgur.com/2Q5iWzz.png)
+
+Put your client id, secret, and user agent (which is just the name of your application) into these variables.
+
+## Using it in the bot
+
+Make sure you have json imported, and your json file is loaded in the cog.
+![B)](https://imgur.com/JNVfoZS.png)
+
+(Also might wanna make sure you have praw imported here because reddit)
+
+Next, use the variables defined in the json file with your python script like this.
+![](https://imgur.com/pGiEf5t.png)
+
+## And after all that, your bot should be done!
+
+![Heyy, that's pretty good!](https://imgur.com/HXkqdDp.png)
+
 
 ### Reminder:
 Please don't contact me for issues regarding discord.py, that should be taken to the discord.py server, which has support for both the rewrite and the asyncio (0.16.x) versions. 
