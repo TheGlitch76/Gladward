@@ -14,7 +14,7 @@ class Admincmds:
         print("Administrative Commands Cog was loaded successfully!")
 
 
-    @commands.command(aliases=['purge'])
+    @commands.command(aliases=['purge', 'clean'])
     @commands.has_permissions(manage_messages=True)
     async def clear(self, ctx, amount=30, max=250):
         sender = ctx.message.author
@@ -38,7 +38,7 @@ class Admincmds:
             await ctx.send("{} || Failed to clear messages! **(You don't have permissions to use this command!)**".format(sender.mention))
 
 
-    @commands.command()
+    @commands.command(aliases=['profile'])
     async def info(self, ctx, user: discord.Member):
         embed = discord.Embed(title="User info", color=0xff5357)
         embed.set_thumbnail(url=user.avatar_url)

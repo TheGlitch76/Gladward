@@ -18,7 +18,7 @@ class NSFW:
 
 
 
-    @commands.command()
+    @commands.command(aliases=['Hentai'])
     async def hentai(self, ctx):
         if ctx.channel.is_nsfw() == False:
             await ctx.send("Sorry {}, you have to be in an NSFW channel to use that command!".format(ctx.message.author.mention))
@@ -39,7 +39,7 @@ class NSFW:
 
 
 
-    @commands.command()
+    @commands.command(aliases=['Paizuri'])
     async def paizuri(self, ctx):
         if ctx.channel.is_nsfw() == False:
             await ctx.send("Sorry {}, you have to be in an NSFW channel to use that command!".format(ctx.message.author.mention))
@@ -61,7 +61,7 @@ class NSFW:
 
 
 
-    @commands.command()
+    @commands.command(aliases=['Neko'])
     async def neko(self, ctx):
         if ctx.channel.is_nsfw() == False:
             await ctx.send("Sorry {}, you have to be in an NSFW channel to use that command.".format(ctx.message.author.mention))
@@ -94,8 +94,7 @@ class NSFW:
                 discord.File('images/FBI/FBI4.jpg'),
                 discord.File('images/FBI/FBI5.jpg')
             ]
-            await ctx.send("**FBI OPEN UP!**\n")
-            await ctx.send(file=random.choice(fbi_memes))
+            await ctx.send("**FBI OPEN UP!**\n", file=random.choice(fbi_memes))
 
 
 def setup(bot):
