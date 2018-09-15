@@ -1,7 +1,7 @@
 # Gladward Version 1
 A bot made in the discord.py rewrite.
 
-## What even is gladward?
+## What even is Gladward?
 Gladward is an open source bot made by Zeexel in the discord.py rewrite. While it's not completely done, there's still many things to play around with at the moment.
 
 
@@ -21,13 +21,8 @@ Features that users suggest in the support discord.
 (Hey you should probably credit me when you use this code)
 
 ## What do I need to use this?
-You need the discord.py rewrite, which can be downloaded here:
-https://github.com/Rapptz/discord.py/tree/rewrite
-(If you don't feel like finding the command yourself, here.)
-pip install -U git+https://github.com/Rapptz/discord.py@rewrite#egg=discord.py[voice]
-
-You also need praw 6.0.0, which can be installed by using this command on your terminal: pip install praw
-
+Take a look at update-and-exec.sh, it contains commands to install everything for you through pip3. If you just want the package names, look in requirements.txt
+#### IF USING AN IDE SUCH AS PYCHARM, YOU ARE ON YOUR OWN. You can figure out how to install everything to the project interpreter online.
 
 ### Reddit instructions (For the memes command and the nsfw commands)
 Go to https://www.reddit.com/prefs/apps/
@@ -59,7 +54,6 @@ Next, use the variables defined in the json file with your python script like th
 ## And after all that, your bot should be done!
 
 ![Heyy, that's pretty good!](https://imgur.com/HXkqdDp.png)
-
 
 ### Reminder:
 Please don't contact me for issues regarding discord.py, that should be taken to the ![discord.py server](https://discordapp.com/invite/r3sSKJJ), which has support for both the rewrite and the asyncio (0.16.x) versions. 
