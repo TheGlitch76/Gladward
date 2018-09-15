@@ -23,8 +23,7 @@ class Fun:
     async def hug(self, ctx, user: discord.Member):
         sender = ctx.message.author
         if sender == user:
-            await ctx.send("{} gave.. Aww, you can't hug yourself!".format(sender.mention))
-            await ctx.send(file=discord.File('images/hugging_gifs/unabletofinduser.gif'))
+            await ctx.send("{} gave.. Aww, you can't hug yourself!".format(sender.mention), file=discord.File('images/hugging_gifs/unabletofinduser.gif'))
         else:
             # Array used to get a random hugging gif from the images\hugging_gifs folder.
             hugginggifs = [
@@ -35,17 +34,14 @@ class Fun:
                 discord.File('images/hugging_gifs/V47M1S4.gif'),
                 discord.File('images/hugging_gifs/F2805f274471676c96aff2bc9fbedd70.gif')
             ]  # (I'll probably switch this to a file hosting of some sort to make this easier)
-
-            await ctx.send("{} gave ".format(ctx.message.author.mention) + "{} a hug! \n".format(user.mention))
-            await ctx.send(file=random.choice(hugginggifs))  # Randomly picks a hugging gif from said array.
+            await ctx.send("{} gave {} a hug!".format(sender.mention, user.mention), file=random.choice(hugginggifs))
 
 
     @hug.error # Error handling
     async def hug_handler(self, ctx, error):
         sender = ctx.message.author
         if error.param.name == 'user': # Finds the missing parameter (argument) of your command.
-            await ctx.send("{} gave... Hang on a minute, I think you forgot to mention someone to hug.".format(sender.mention))
-            await ctx.send(file=discord.File('images/hugging_gifs/unabletofinduser.gif'))
+            await ctx.send("{} gave... Hang on a minute, I think you forgot to mention someone to hug.".format(sender.mention), file=discord.File('images/hugging_gifs/unabletofinduser.gif'))
 
     @commands.command(aliases=['8ball']) # Pretty striaghtforward, makes it to where the command can be ran using $8ball intead of $eightball
     async def eightball(self, ctx, args):
