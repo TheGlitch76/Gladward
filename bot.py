@@ -30,6 +30,9 @@ async def on_ready():
     print("https://zeexel.github.io")
     print("|||||||||||||||||||||||||||||||||||||")
 
+@bot.command()
+async def ping(ctx):
+    await ctx.send("Pong! :ping_pong: **{}**".format(round(bot.latency)))
 
 #Loads the cogs and then logs into the bot using the token given by the discord developers portal.
 

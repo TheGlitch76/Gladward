@@ -21,9 +21,5 @@ class General:
         sender = ctx.message.author
         await ctx.send("{} || {}".format(sender.mention, invlink))
 
-    @commands.command()
-    async def ping(self, ctx):
-        await ctx.send("Pong! :ping_pong:")
-
 def setup(bot):
     bot.add_cog(General(bot))
