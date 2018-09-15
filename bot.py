@@ -27,6 +27,7 @@ async def on_ready():
     print("Ready for use!")
     print("Discord.py Version {}".format(discord.__version__))
     print("Logged in as:\n{}/{}#{}".format(bot.user.id, bot.user.name, bot.user.discriminator))
+    print("Currently running in {} servers.".format(len(list(bot.guilds))))
     print("https://zeexel.github.io")
     print("|||||||||||||||||||||||||||||||||||||")
 
