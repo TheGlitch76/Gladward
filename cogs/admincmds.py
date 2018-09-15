@@ -41,6 +41,7 @@ class Admincmds:
     @commands.command()
     async def info(self, ctx, user: discord.Member):
         embed = discord.Embed(title="User info", color=0xff5357)
+        embed.set_thumbnail(url=user.avatar_url)
         embed.add_field(name="Name", value="{}".format(user.name), inline=False)
         embed.add_field(name="Name on server", value="{}".format(user.display_name), inline=False)
         embed.add_field(name="ID", value="{}".format(user.id), inline=False)
