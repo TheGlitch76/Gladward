@@ -31,6 +31,11 @@ async def on_ready():
     print("https://zeexel.github.io")
     print("|||||||||||||||||||||||||||||||||||||")
 
+
+@bot.event
+async def on_guild_join(guild):
+    print("Joined a new server! We're now in {} servers.".format(len(list(bot.guilds))))
+
 @bot.command()
 async def ping(ctx):
     await ctx.send("Pong! :ping_pong: **{}**".format(round(bot.latency)))
