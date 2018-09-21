@@ -93,7 +93,7 @@ class NSFW:
                 discord.File('images/FBI/FBI3.gif'),
                 discord.File('images/FBI/FBI4.jpg'),
                 discord.File('images/FBI/FBI5.jpg'),
-				discord.File('images/FBI/FBI6.gif')
+		discord.File('images/FBI/FBI6.gif')
             ]
             await ctx.send("**FBI OPEN UP!**\n", file=random.choice(fbi_memes))
 
