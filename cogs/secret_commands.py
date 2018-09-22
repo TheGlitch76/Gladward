@@ -22,7 +22,7 @@ class Secret:
             await ctx.send(":wave: Bye!")
             await bot.logout()
         else:
-            await ctx.send("Sorry {}, only the host or the bot owner can do this.")
+            await ctx.send("Sorry {}, only the host or the bot owner can do this.".format(sender.mention))
 	
     @commands.command()
     async def despacito(self, ctx, despaversion):
