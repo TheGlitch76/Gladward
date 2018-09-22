@@ -82,14 +82,14 @@ class Fun:
                              client_secret=memedata['clientsecret'],
                              user_agent=memedata['useragent']) # I put something in the readme.md to explain this bit.
         memes_submissions = reddit.subreddit(random.choice(meme_subreddits)).hot() # Picks a post from the 'hot' category of a subreddit.
-        post_to_pick = random.randint(1, 10)
+        post_to_pick = random.randint(1, 25)
         for i in range(0, post_to_pick):
-            submission = next(x for x in memes_submissions if not x.stickied)
+            submission = next(x for x in memes_submissions if not x.stickied and not x.over18) # Pick messages that are not stickied or NSFW
 
 
-        embed = discord.Embed(title='Fresh memes hot and ready!', color=0xff6767)
+        embed = discord.Embed(title=submission.title, color=0xff6767, url=submission.shortlink)
         embed.set_image(url=submission.url) # This makes the image of the reddit post appear on the embed.
-        embed.set_footer(text='Straight from a random subreddit!')
+        embed.set_footer(text='Served hot and ready from r/' + submission.subreddit.display_name)
 
         await ctx.send(embed=embed)
 
