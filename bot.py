@@ -9,36 +9,26 @@
 import json
 config = json.load(open("config/settings.json","r"))
 #---------------------------------------------------------------
-import random
 import discord
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix="$")
+bot = commands.Bot(command_prefix="g$")
 bot.remove_command('help')
-game = discord.Game(name="$help | https://github.com/Zeexel/Gladward")
-#---------------------------------------------------------------------------------------------
+#---------------------------------------------------------------
 
 
 #Should be pretty straightfoward, this is what should happen when the bot is turned on.
 
 @bot.event
 async def on_ready():
+    game = discord.Game(name="g$help | Running in {} servers!".format(len(list(bot.guilds))))
     await bot.change_presence(status=discord.Status.online, activity=game)
     print("Ready for use!")
     print("Discord.py Version {}".format(discord.__version__))
     print("Logged in as:\n{}/{}#{}".format(bot.user.id, bot.user.name, bot.user.discriminator))
-    print("Currently running in {} servers.".format(len(list(bot.guilds))))
+    print("Running in {} servers!".format(len(list(bot.guilds))))
     print("https://zeexel.github.io")
     print("|||||||||||||||||||||||||||||||||||||")
-
-
-@bot.event
-async def on_guild_join(guild):
-    print("Joined a new server! We're now in {} servers.".format(len(list(bot.guilds))))
-
-@bot.command()
-async def ping(ctx):
-    await ctx.send("Pong! :ping_pong: **{}**".format(round(bot.latency)))
 
 #Loads the cogs and then logs into the bot using the token given by the discord developers portal.
 
