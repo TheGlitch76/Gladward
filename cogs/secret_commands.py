@@ -9,19 +9,20 @@ class Secret:
     async def on_ready(self):
         print("Secret Commands Cog was loaded successfully!")
 
-    admins = [
-        108268232556703744, # Zeexel
-        200325748786069504, # Glitch
-        133693527296180224 # Ducky
-    ]
-	
     @commands.command()
     async def stop(self, ctx):
-        if ctx.message.author.id in admins:
-	    await ctx.send(":wave: Shutting down!")
-            await ctx.bot.logout()
-	else:
-	    await ctx.send("No! Only the bot owners and hosts may stop the bot!")
+        admins = [
+            108268232556703744,  # Zeexel
+            200325748786069504,  # Glitch
+            133693527296180224  # Ducky
+        ]
+        sender = ctx.message.author
+        bot = ctx.bot
+        if sender.id in admins:
+            await ctx.send(":wave: Bye!")
+            await bot.logout()
+        else:
+            await ctx.send("Sorry {}, only the host or the bot owner can do this.")
 	
     @commands.command()
     async def despacito(self, ctx, despaversion):
