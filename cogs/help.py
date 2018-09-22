@@ -58,7 +58,7 @@ class HelpCmds:
     async def help_handler(self, ctx, error):
         if error.param.name == 'page':
             embed = discord.Embed(title="Gladward Bot Commands", color=0x5ec7ff)
-            embed.set_author(name="Vote for us!", url="https://discordbots.org/bot/482645162032365568", icon_url="https://cdn.discordapp.com/attachments/474928804964597782/482649495776133130/Comm152.png")
+            embed.set_author(name="Running on {} servers!".format(len(list(ctx.bot.guilds))), url="https://discordbots.org/bot/482645162032365568", icon_url="https://cdn.discordapp.com/attachments/474928804964597782/482649495776133130/Comm152.png")
             embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/452298699004182529/482649364871905290/image.png")
             embed.add_field(name="Admin Commands", value="``$help admin``", inline=True)
             embed.add_field(name="Fun commands", value="``$help fun``", inline=True)
