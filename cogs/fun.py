@@ -74,8 +74,7 @@ class Fun:
     async def meme(self, ctx): # Reddit, now this is gonna get interesting.
 
         meme_subreddits = [
-            'me_irl',
-            'dankmemes'
+            'me_irl'
         ]
 
         reddit = praw.Reddit(client_id=memedata['clientid'],
@@ -84,8 +83,7 @@ class Fun:
         memes_submissions = reddit.subreddit(random.choice(meme_subreddits)).hot() # Picks a post from the 'hot' category of a subreddit.
         post_to_pick = random.randint(1, 25)
         for i in range(0, post_to_pick):
-            submission = next(x for x in memes_submissions if not x.stickied and not x.over18) # Pick messages that are not stickied or NSFW
-
+            submission = next(x for x in memes_submissions if not x.stickied) # Pick messages that are not stickied
 
         embed = discord.Embed(title=submission.title, color=0xff6767, url=submission.shortlink)
         embed.set_image(url=submission.url) # This makes the image of the reddit post appear on the embed.
